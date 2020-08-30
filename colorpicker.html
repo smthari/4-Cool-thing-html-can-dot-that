@@ -1,0 +1,68 @@
+    <style>
+    body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+    }
+
+    h1 {
+    font-size: 3rem;
+    color: fff;
+    font-family: Bebus Neue;
+    text-align: center;
+    }
+
+    input[type="color"] {
+    background-color: #fff;
+    padding: 10px;
+    width: 200px;
+    height: 30px;
+    cursor: pointer;
+    border: 2px solid #000;
+    border-radius: 3px;
+    margin: 20px;
+    outline: none;
+    }
+
+    b {
+    background-color: #fff;
+    padding: 16px;
+    font-family: sans-serif;
+    color: #000;
+    }
+
+    code {
+    font-size: 1.2rem;
+    background-color: rgb(139, 240, 24);
+
+    color: #000;
+    border-radius: 3px;
+    padding: 5px;
+    }
+    </style>
+
+    <body>
+    <h1>Color Picker</h1>
+    <label for="colorPicker" class="labelclass">Choose a color</label>
+    <input type="color" value="#000" id="colorPicker">
+
+    <b>Current color code:-<code id="colorCode"></code></b>
+    <script>
+
+    const body = document.querySelector("body");
+    const input = document.getElementById("colorPicker");
+    const colorCode = document.getElementById("colorCode");
+
+    setColor();
+    input.addEventListener("input", setColor);
+
+    function setColor() {
+    body.style.backgroundColor = input.value;
+    colorCode.innerHTML = input.value;
+    }
+    </script>
+
+    </body>

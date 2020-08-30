@@ -1,0 +1,58 @@
+<style>
+body {
+background-color: #000;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+color: #fff;
+}
+
+h1 {
+font-family: Bebus Neue;
+font-size: 3rem;
+color: #fff;
+}
+
+form {
+max-width: 40vw;
+display: flex;
+flex-direction: column;
+}
+
+form label {
+font-family: "Open Sans", sans-serif;
+font-size: 1.2rem;
+margin-bottom: 12px;
+}
+
+form input {
+border: 2px solid lightslategray;
+height: 40px;
+border-radius: 3px;
+padding: 5px;
+font-size: 1rem;
+outline: none;
+}
+</style>
+
+<body>
+
+<h1>Dropdown with searchable text</h1>
+<form>
+<label for="yahoo">Choose your magical house</label>
+<input list="google" id="yahoo" name="yahoo" placeholder="type here..." />
+<datalist id="google">
+<option value="How to become a hacker">
+<option value="How to become a coder">
+<option value="How to become a programmer">
+<option value="How to become a teacher">
+<option value="How to become a dancer">
+<option value="How to become a musician">
+<option value="How to become a Chefs">
+<option value="How to become a rapper">
+
+</datalist>
+</form>
+
+</body>
